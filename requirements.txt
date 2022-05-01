@@ -1,3 +1,8 @@
 django
+gunicorn
+django-heroku
+pillow
+whitenoise
+psycopg2
 requests
 python-decouple
