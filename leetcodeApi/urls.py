@@ -21,5 +21,6 @@ from api.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
-    path('<str:username>/',getUsername),
+    path('<str:username>/', getUsername),
+    path('a/<str:username>/', svg),
 ]
