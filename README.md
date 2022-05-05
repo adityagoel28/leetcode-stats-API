@@ -1,13 +1,24 @@
 <!-- # Leetcode Stats API -->
 <h1 align="center" color="blue">Leetcode Stats API</h1>
 
-<!-- 
-```diff
-@@ text in purple (and bold)@@
-``` -->
+<p align="center">
+  <img src="https://img.shields.io/badge/GraphQl-E10098?style=for-the-badge&logo=graphql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" />
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+</p>
 
-#### Work in progress
-More work is to be done on this project.
+<p align="center">
+  <img src="https://pyheroku-badge.herokuapp.com/?app=leetcode-stats-api">
+</p>
+
+
+```diff
+@@ Work In Progress @@
+```
+
+<!-- #### Work in progress
+More work is to be done on this project. -->
 
 ## How to Use
 Append your LeetCode username at the end of the url https://leetcode-stat-api.herokuapp.com/{username}/ and get your LeetCode stats. It's that simple!
