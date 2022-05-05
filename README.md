@@ -1,4 +1,4 @@
-<!-- # Leetcode Stats API -->
+<!-- # LeetCode Stats API -->
 <h1 align="center" color="blue">Leetcode Stats API</h1>
 
 <p align="center">
