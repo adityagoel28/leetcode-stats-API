@@ -1,5 +1,5 @@
 <!-- # LeetCode Stats API -->
-<h1 align="center" color="blue">Leetcode Stats API</h1>
+<h1 align="center" color="blue">LeetCode Stats API</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/GraphQl-E10098?style=for-the-badge&logo=graphql&logoColor=white" />
