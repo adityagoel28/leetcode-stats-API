@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
     path('<str:username>/', svg_icon),
+    path('<str:username>/theme=<str:theme>', svg_icon_theme),
     # path('a/<str:username>/', svg_icon),
 ]
