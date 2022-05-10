@@ -27,7 +27,7 @@
 <!-- #### Work in progress
 More work is to be done on this project. -->
 
-## How to Use
+# How to Use
 Append your LeetCode username at the end of the url https://leetcode-stat-api.herokuapp.com/{username}/ and get your LeetCode stats. It's that simple!
 <br>
 e.g. - https://leetcode-stat-api.herokuapp.com/adityag28/
@@ -38,6 +38,16 @@ e.g. - https://leetcode-stat-api.herokuapp.com/adityag28/
 The result will show the total number of questions on the LeetCode Platform, also with easy, medium and hard difficulty.
 <br>
 It will show the total number of questions solved by the user, and also show the individual questions solved by them based on the difficulty level.
+
+## Theme
+For those who love dark theme, they can add `theme=dark` at the end. Right now only light and dark theme are only supported. In future more themes will be added.
+For dark theme, use https://leetcode-stat-api.herokuapp.com/adityag28/theme=dark
+
+## Result
+![image](https://leetcode-stat-api.herokuapp.com/adityag28/theme=dark)
+
+## Usage
+The most popular and common use for this API url is that the users can simply add this to their GitHub profile readme to showcase their LeetCode statistics.
 
 ## Stargazers
 [![Stargazers repo roster for @adityagoel28/leetcode-stats-API](https://reporoster.com/stars/adityagoel28/leetcode-stats-API)](https://github.com/adityagoel28/leetcode-stats-API/stargazers)
