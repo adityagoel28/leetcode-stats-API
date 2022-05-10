@@ -4,6 +4,9 @@ import requests
 import json
 import pandas as pd
 from django.utils.html import format_html
+from django.db.models import F
+
+from api.models import leetcodeUsername
 
 # Create your views here.
 
@@ -108,6 +111,11 @@ def svg(request, username):
 
 
 def svg_icon(request, username):
+    if leetcodeUsername.objects.filter(username = username).exists():
+        leetcodeUsername.objects.filter(username=username).update(count=F('count') + 1)
+    else:
+        leetcodeUsername.objects.create(username = username).save()
+
     print('dddd')
 
     query = '''
@@ -226,6 +234,11 @@ def svg_icon(request, username):
     return HttpResponse(svg_tag, content_type="image/svg+xml")
 
 def svg_icon_theme(request, username, theme):
+    if leetcodeUsername.objects.filter(username = username).exists():
+        leetcodeUsername.objects.filter(username=username).update(count=F('count') + 1)
+    else:
+        leetcodeUsername.objects.create(username = username).save()
+
     if(theme.lower() == 'dark'):
         # print('dddd')
 
