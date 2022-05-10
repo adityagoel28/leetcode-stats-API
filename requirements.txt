@@ -5,4 +5,5 @@ pillow
 whitenoise
 psycopg2
 requests
+pandas
 python-decouple
