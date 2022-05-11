@@ -14,7 +14,7 @@ def home(request):
     return render(request, 'index.html')
 
 def getUsername(request, username):
-    print('wwww')
+    # print('wwww')
 
     query = '''
     query getUserProfile($username: String!) {
@@ -63,7 +63,7 @@ def getUsername(request, username):
     return JsonResponse(json_data, status=201, safe=False)
 
 def svg(request, username):
-    print('ssss')
+    # print('ssss')
 
     query = '''
     query getUserProfile($username: String!) {
@@ -117,7 +117,7 @@ def svg_icon(request, username):
         else:
             leetcodeUsername.objects.create(username = username).save()
 
-        print('dddd')
+        # print('dddd')
 
         query = '''
         query getUserProfile($username: String!) {
@@ -145,9 +145,12 @@ def svg_icon(request, username):
         r = requests.post(url, json={'query': query, 'variables': variables})
         json_data = json.loads(r.text)
         print(json.dumps(json_data, indent=4))
-        
+
         usernameHandle = json_data['data']['matchedUser']['username']
         total = json_data['data']['matchedUser']['submitStats']['acSubmissionNum'][0]['count']
+        t_easy = json_data['data']['allQuestionsCount'][1]['count']
+        t_med = json_data['data']['allQuestionsCount'][2]['count']
+        t_hard = json_data['data']['allQuestionsCount'][3]['count']
         easy = json_data['data']['matchedUser']['submitStats']['acSubmissionNum'][1]['count']
         med = json_data['data']['matchedUser']['submitStats']['acSubmissionNum'][2]['count']
         hard = json_data['data']['matchedUser']['submitStats']['acSubmissionNum'][3]['count']
@@ -211,17 +214,17 @@ def svg_icon(request, username):
                                 # '</div>'
                                 '</div>'
                                     '<div style="float: left;width: 65%;">'
-                                        '<div style="margin:20px; margin-bottom:2px; margin-top:0px;"><span style="color:#5db55f;">Easy:</span> <b style="color:#5db55f;">{2}</b>/568</div>'
+                                        '<div style="margin:20px; margin-bottom:2px; margin-top:0px;"><span style="color:#5db55f;">Easy:</span> <b style="color:#5db55f;">{2}</b>/{5}</div>'
                                         '<div style="background-color:#e4e4e4; border-radius:50px; margin:20px; margin-top:2px;">'
-                                            '<div style="height:4px; width:calc(({2}/568) * 100%); background-color:#5db55f; border-radius:50px;"></div>'
+                                            '<div style="height:4px; width:calc(({2}/{5}) * 100%); background-color:#5db55f; border-radius:50px;"></div>'
                                         '</div>'
-                                        '<div style="margin:20px; margin-bottom:2px;"><span style="color:#faab43;">Medium: </span> <b style="color:#faab43;">{3}</b>/1203</div>'
+                                        '<div style="margin:20px; margin-bottom:2px;"><span style="color:#faab43;">Medium: </span> <b style="color:#faab43;">{3}</b>/{6}</div>'
                                         '<div style="background-color:#e4e4e4; border-radius:50px; margin:20px; margin-top:2px;">'
-                                            '<div style="height:4px; width:calc(({3}/1203) * 100%); background-color:#faab43; border-radius:50px;"></div>'
+                                            '<div style="height:4px; width:calc(({3}/{6}) * 100%); background-color:#faab43; border-radius:50px;"></div>'
                                         '</div>'
-                                        '<div style="margin:20px; margin-bottom:2px;"><span style="color:#d55951;">Hard: </span> <b style="color:#d55951;">{4}</b>/491</div>'
+                                        '<div style="margin:20px; margin-bottom:2px;"><span style="color:#d55951;">Hard: </span> <b style="color:#d55951;">{4}</b>/{7}</div>'
                                         '<div style="background-color:#e4e4e4; border-radius:50px; margin:20px; margin-top:2px;">'
-                                            '<div style="height:4px; width:calc(({4}/491) * 100%); background-color:#d55951; border-radius:50px;"></div>'
+                                            '<div style="height:4px; width:calc(({4}/{7}) * 100%); background-color:#d55951; border-radius:50px;"></div>'
                                         '</div>'
                                     '</div>'
                                 '</div>'
@@ -229,7 +232,7 @@ def svg_icon(request, username):
                         '</foreignObject>'
                     '</g>'
                 '</g>'
-            '</svg>', username, total, easy, med, hard)
+            '</svg>', username, total, easy, med, hard, t_easy, t_med, t_hard)
 
         # return mark_safe(svg_tag)
         return HttpResponse(svg_tag, content_type="image/svg+xml")
@@ -276,6 +279,9 @@ def svg_icon_theme(request, username, theme):
             
             usernameHandle = json_data['data']['matchedUser']['username']
             total = json_data['data']['matchedUser']['submitStats']['acSubmissionNum'][0]['count']
+            t_easy = json_data['data']['allQuestionsCount'][1]['count']
+            t_med = json_data['data']['allQuestionsCount'][2]['count']
+            t_hard = json_data['data']['allQuestionsCount'][3]['count']
             easy = json_data['data']['matchedUser']['submitStats']['acSubmissionNum'][1]['count']
             med = json_data['data']['matchedUser']['submitStats']['acSubmissionNum'][2]['count']
             hard = json_data['data']['matchedUser']['submitStats']['acSubmissionNum'][3]['count']
@@ -339,17 +345,17 @@ def svg_icon_theme(request, username, theme):
                                     # '</div>'
                                     '</div>'
                                         '<div style="float: left;width: 65%;">'
-                                            '<div style="margin:20px; margin-bottom:2px; margin-top:0px; color:#e6e6eb;"><span style="color:#5db55f;">Easy:</span> <b style="color:#5db55f;">{2}</b>/568</div>'
+                                            '<div style="margin:20px; margin-bottom:2px; margin-top:0px; color:#e6e6eb;"><span style="color:#5db55f;">Easy:</span> <b style="color:#5db55f;">{2}</b>/{5}</div>'
                                             '<div style="background-color:#e4e4e4; border-radius:50px; margin:20px; margin-top:2px;">'
-                                                '<div style="height:4px; width:calc(({2}/568) * 100%); background-color:#5db55f; border-radius:50px;"></div>'
+                                                '<div style="height:4px; width:calc(({2}/{5}) * 100%); background-color:#5db55f; border-radius:50px;"></div>'
                                             '</div>'
-                                            '<div style="margin:20px; margin-bottom:2px; color:#e6e6eb;"><span style="color:#faab43;">Medium: </span> <b style="color:#faab43;">{3}</b>/1203</div>'
+                                            '<div style="margin:20px; margin-bottom:2px; color:#e6e6eb;"><span style="color:#faab43;">Medium: </span> <b style="color:#faab43;">{3}</b>/{6}</div>'
                                             '<div style="background-color:#e4e4e4; border-radius:50px; margin:20px; margin-top:2px;">'
-                                                '<div style="height:4px; width:calc(({3}/1203) * 100%); background-color:#faab43; border-radius:50px;"></div>'
+                                                '<div style="height:4px; width:calc(({3}/{6}) * 100%); background-color:#faab43; border-radius:50px;"></div>'
                                             '</div>'
-                                            '<div style="margin:20px; margin-bottom:2px; color:#e6e6eb;"><span style="color:#d55951;">Hard: </span> <b style="color:#d55951;">{4}</b>/491</div>'
+                                            '<div style="margin:20px; margin-bottom:2px; color:#e6e6eb;"><span style="color:#d55951;">Hard: </span> <b style="color:#d55951;">{4}</b>/{7}</div>'
                                             '<div style="background-color:#e4e4e4; border-radius:50px; margin:20px; margin-top:2px;">'
-                                                '<div style="height:4px; width:calc(({4}/491) * 100%); background-color:#d55951; border-radius:50px;"></div>'
+                                                '<div style="height:4px; width:calc(({4}/{7}) * 100%); background-color:#d55951; border-radius:50px;"></div>'
                                             '</div>'
                                         '</div>'
                                     '</div>'
@@ -357,7 +363,7 @@ def svg_icon_theme(request, username, theme):
                             '</foreignObject>'
                         '</g>'
                     '</g>'
-                '</svg>', username, total, easy, med, hard)
+                '</svg>', username, total, easy, med, hard, t_easy, t_med, t_hard)
 
             # return mark_safe(svg_tag)
             return HttpResponse(svg_tag, content_type="image/svg+xml")
