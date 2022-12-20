@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "leetcodeApi/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "leetcodeApi/wsgi.py"
+    }
+  ]
+}
