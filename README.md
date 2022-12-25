@@ -19,6 +19,11 @@
 
 <!-- [![KnlnKS's LeetCode stats](https://leetcode-stats-six.vercel.app/api?username=KnlnKS)](https://github.com/KnlnKS/leetcode-stats) -->
 
+Welcome to the Leetcode Statistics API repository!
+
+This API allows you to easily access statistical data about users on Leetcode, a popular platform for preparing for technical interviews and honing coding skills. With this API, you can retrieve information such as a user's:
+- Overall statistics (i.e. total number of solved problems, out of total problems on LeetCode)
+- Statistics by difficulty level (e.g. number of easy, medium, and hard problems solved)
 
 ```diff
 @@ Work In Progress - Data Visualisation and more @@
@@ -28,9 +33,13 @@
 More work is to be done on this project. -->
 
 # How to Use
-Append your LeetCode username at the end of the url https://leetcode-stat-api.herokuapp.com/{username}/ and get your LeetCode stats. It's that simple!
-<br>
-e.g. - https://leetcode-stat-api.herokuapp.com/adityag28/
+To use the Leetcode Statistics API, simply follow these steps:
+- Append your Leetcode username to the end of the URL https://leetcode-stat-api.herokuapp.com/{username}/. For example, if your Leetcode username is adityag28, the URL you would use would be https://leetcode-stat-api.herokuapp.com/adityag28.
+- Simply use the URL anywhere.
+- The API will return an image object containing your Leetcode statistics which you can add anywhere in your portfolio or in your GitHub profile readme.
+
+It's that easy! No need to worry about obtaining an API key or rate limiting - just make the request(use the URL) and get your stats.
+I hope you find this API useful and appreciate any feedback you may have. Thank you for using the Leetcode Statistics API!
 
 ## Result
 ![image](https://leetcode-stat-api.herokuapp.com/adityag28/)
@@ -38,16 +47,17 @@ e.g. - https://leetcode-stat-api.herokuapp.com/adityag28/
 The result will show the total number of questions on the LeetCode Platform, also with easy, medium and hard difficulty.
 <br>
 It will show the total number of questions solved by the user, and also show the individual questions solved by them based on the difficulty level.
-
+<br>
+With this data, you can get a sense of your progress and strengths on the Leetcode platform, as well as areas where you may want to focus your efforts.
 ## Theme
-For those who love dark theme, they can add `theme=dark` at the end. Right now only light and dark theme are only supported. In future more themes will be added.
+For users who prefer a darker visual theme, they can add `theme=dark` at the end. Right now only light and dark theme are only supported. In future more themes will be added.
 For dark theme, use https://leetcode-stat-api.herokuapp.com/adityag28/theme=dark
 
 ## Result
 ![image](https://leetcode-stat-api.herokuapp.com/adityag28/theme=dark)
 
 ## Usage
-The most popular and common use for this API url is that the users can simply add this to their GitHub profile readme to showcase their LeetCode statistics.
+The most popular and common use for this API url is that the users can simply add this to their GitHub profile readme to showcase their LeetCode statistics, allowing others to easily view your progress and achievements on the Leetcode platform.
 
 ## Stargazers
 [![Stargazers repo roster for @adityagoel28/leetcode-stats-API](https://reporoster.com/stars/adityagoel28/leetcode-stats-API)](https://github.com/adityagoel28/leetcode-stats-API/stargazers)
