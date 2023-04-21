@@ -1,6 +1,5 @@
 django
 gunicorn
-django-heroku
 pillow
 whitenoise
 psycopg2
@@ -8,4 +7,3 @@ requests
 pandas
 python-decouple
 dj_database_url
-django_heroku
