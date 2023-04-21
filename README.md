@@ -34,7 +34,7 @@ More work is to be done on this project. -->
 
 # How to Use
 To use the Leetcode Statistics API, simply follow these steps:
-- Append your Leetcode username to the end of the URL https://leetcode-stat-api.herokuapp.com/{username}/. For example, if your Leetcode username is adityag28, the URL you would use would be https://leetcode-stat-api.herokuapp.com/adityag28.
+- Append your Leetcode username to the end of the URL http://34.93.126.129:8000/{username}/. For example, if your Leetcode username is adityag28, the URL you would use would be http://34.93.126.129:8000/adityag28.
 - Simply use the URL anywhere.
 - The API will return an image object containing your Leetcode statistics which you can add anywhere in your portfolio or in your GitHub profile readme.
 
@@ -42,7 +42,7 @@ It's that easy! No need to worry about obtaining an API key or rate limiting - j
 I hope you find this API useful and appreciate any feedback you may have. Thank you for using the Leetcode Statistics API!
 
 ## Result
-![image](https://leetcode-stat-api.herokuapp.com/adityag28/)
+![image](http://34.93.126.129:8000/adityag28/)
 
 The result will show the total number of questions on the LeetCode Platform, also with easy, medium and hard difficulty.
 <br>
@@ -54,7 +54,7 @@ For users who prefer a darker visual theme, they can add `theme=dark` at the end
 For dark theme, use https://leetcode-stat-api.herokuapp.com/adityag28/theme=dark
 
 ## Result
-![image](https://leetcode-stat-api.herokuapp.com/adityag28/theme=dark)
+![image](http://34.93.126.129:8000/adityag28/theme=dark)
 
 ## Usage
 The most popular and common use for this API url is that the users can simply add this to their GitHub profile readme to showcase their LeetCode statistics, allowing others to easily view your progress and achievements on the Leetcode platform.
